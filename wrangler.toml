@@ -1,0 +1,8 @@
+name = "archiana"
+compatibility_date = "2025-01-01"
+
+[site]
+bucket = "./out"
+
+[build]
+command = "npm run build"
