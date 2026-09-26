@@ -1,3 +1,5 @@
+import { cn } from '@/lib/cn'
+
 type ButtonProps = {
   href: string
   children: React.ReactNode
@@ -8,16 +10,22 @@ export function Button({ href, children, dark = true }: ButtonProps) {
   return (
     <a
       href={href}
-      className={`group inline-flex min-h-12 items-center justify-between gap-8 border px-5 text-[12px] font-bold uppercase tracking-[0.12em] transition ${
+      className={cn(
+        'group inline-flex min-h-12 items-center justify-between gap-8 border px-5 text-[12px] font-bold tracking-[0.12em] uppercase transition',
         dark
           ? 'border-ink bg-ink text-paper hover:bg-transparent hover:text-ink'
-          : 'border-paper text-paper hover:bg-paper hover:text-ink'
-      }`}
+          : 'border-paper text-paper hover:bg-paper hover:text-ink',
+      )}
     >
-      <span>{children}</span>
+      <span className={cn('transition group-hover:text-ink', dark && 'text-paper')}>
+        {children}
+      </span>
       <span
         aria-hidden
-        className='text-lg leading-none transition-transform group-hover:translate-x-1'
+        className={cn(
+          'text-lg leading-none transition-transform group-hover:translate-x-1 group-hover:text-ink',
+          dark && 'text-paper',
+        )}
       >
         ↗
       </span>

@@ -35,9 +35,9 @@ export function Services() {
           {services.map(([number, title, text]) => (
             <article
               key={number}
-              className='border-b border-line p-6 sm:border-r sm:nth-[2n]:border-r-0 lg:border-b-0 lg:border-r lg:last:border-r-0 lg:p-8'
+              className='border-b border-line p-6 sm:border-r sm:nth-[2n]:border-r-0 lg:border-r lg:border-b-0 lg:p-8 lg:last:border-r-0'
             >
-              <p className='text-[10px] font-bold uppercase tracking-[0.14em] text-muted'>
+              <p className='text-[10px] font-bold tracking-[0.14em] text-muted uppercase'>
                 {number}
               </p>
               <h3 className='mt-20 text-2xl tracking-[-0.03em]'>{title}</h3>

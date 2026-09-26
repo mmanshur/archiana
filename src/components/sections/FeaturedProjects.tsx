@@ -1,3 +1,5 @@
+import { cn } from '@/lib/cn'
+
 const projects = [
   {
     id: '01',
@@ -31,9 +33,9 @@ export function FeaturedProjects() {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className={`group ${index % 2 === 1 ? 'lg:translate-y-20' : ''}`}
+              className={cn('group', index % 2 === 1 && 'lg:translate-y-20')}
             >
-              <div className={`mb-5 overflow-hidden bg-soft ${project.className}`}>
+              <div className={cn('mb-5 overflow-hidden bg-soft', project.className)}>
                 <div className='h-full w-full scale-100 bg-[linear-gradient(145deg,#ddd5c8,#aaa18f)] transition-transform duration-700 group-hover:scale-105' />
               </div>
               <div className='flex items-start justify-between border-t border-line pt-4'>
@@ -41,7 +43,7 @@ export function FeaturedProjects() {
                   <h3 className='text-base font-medium'>{project.title}</h3>
                   <p className='mt-1 text-xs text-muted'>{project.type}</p>
                 </div>
-                <div className='text-right text-[10px] font-bold uppercase tracking-[0.12em] text-muted'>
+                <div className='text-right text-[10px] font-bold tracking-[0.12em] text-muted uppercase'>
                   <p>{project.id}</p>
                   <p>{project.year}</p>
                 </div>

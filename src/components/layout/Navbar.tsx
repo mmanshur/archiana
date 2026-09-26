@@ -1,6 +1,8 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
+import { cn } from '@/lib/cn'
 
 const links = [
   { label: 'Projects', href: '#projects' },
@@ -13,11 +15,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className='absolute inset-x-0 top-0 z-50'>
-      <div className='section-shell flex h-24 items-center justify-between'>
-        <a href='#top' className='text-sm font-black uppercase tracking-[0.2em]'>
-          Archiana
+    <header className='fixed inset-x-0 top-0 z-50 bg-[#273348] text-white'>
+      <div className='section-shell flex h-16 items-center justify-between'>
+        {/* Logo */}
+        <a href='#top' className='flex items-center'>
+          <Image
+            src='/images/logo.png'
+            alt='Archiana logo'
+            width={205}
+            height={77}
+            priority
+            className='h-9 w-auto'
+          />
         </a>
+
+        {/* Desktop nav */}
         <nav className='hidden items-center gap-8 lg:flex' aria-label='Primary navigation'>
           {links.map((link) => (
             <a
@@ -30,39 +42,53 @@ export function Navbar() {
           ))}
           <a
             href='#contact'
-            className='border border-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em]'
+            className='border border-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-60'
           >
             Start a project
           </a>
         </nav>
+
+        {/* Hamburger — mobile only */}
         <button
           type='button'
-          className='inline-flex h-10 w-10 items-center justify-center border border-ink lg:hidden'
+          className='flex h-9 w-9 items-center justify-center border border-white/40 lg:hidden'
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
+          onClick={() => setOpen((v) => !v)}
         >
-          <span className='text-xl'>{open ? '×' : '☰'}</span>
+          {open ? '✕' : '☰'}
         </button>
       </div>
 
-      {open && (
-        <nav
-          className='mx-6 border border-ink bg-paper p-5 lg:hidden'
-          aria-label='Mobile navigation'
-        >
+      {/* Mobile dropdown — no responsive hidden, controlled purely by open state */}
+      <div
+        aria-hidden={!open}
+        className={cn(
+          'border-t border-white/10 bg-[#1e2a3a] px-6 pb-6 lg:hidden',
+          open ? 'block' : 'hidden',
+        )}
+      >
+        <ul>
           {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className='block border-b border-line py-4 text-sm font-bold uppercase tracking-[0.12em] last:border-b-0'
-            >
-              {link.label}
-            </a>
+            <li key={link.href} className='border-b border-white/10'>
+              <a
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className='block py-4 text-sm font-bold uppercase tracking-[0.12em] transition-opacity hover:opacity-60'
+              >
+                {link.label}
+              </a>
+            </li>
           ))}
-        </nav>
-      )}
+        </ul>
+        <a
+          href='#contact'
+          onClick={() => setOpen(false)}
+          className='mt-5 flex items-center justify-center border border-white/40 py-3 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-60'
+        >
+          Start a project
+        </a>
+      </div>
     </header>
   )
 }

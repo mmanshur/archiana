@@ -4,7 +4,7 @@ export function About() {
       <div className='section-shell grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-24'>
         <div className='min-h-[480px] bg-soft p-7 lg:min-h-[640px]'>
           <div className='flex h-full flex-col justify-between border border-black/10 p-6'>
-            <div className='flex justify-between text-[10px] font-bold uppercase tracking-[0.14em] text-muted'>
+            <div className='flex justify-between text-[10px] font-bold tracking-[0.14em] text-muted uppercase'>
               <span>About Archiana</span>
               <span>Est. 2017</span>
             </div>
@@ -31,19 +31,19 @@ export function About() {
           <div className='mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-line pt-6'>
             <div>
               <p className='text-4xl tracking-[-0.04em]'>08</p>
-              <p className='mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-muted'>
+              <p className='mt-2 text-[10px] font-bold tracking-[0.12em] text-muted uppercase'>
                 Years
               </p>
             </div>
             <div>
               <p className='text-4xl tracking-[-0.04em]'>42</p>
-              <p className='mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-muted'>
+              <p className='mt-2 text-[10px] font-bold tracking-[0.12em] text-muted uppercase'>
                 Projects
               </p>
             </div>
             <div>
               <p className='text-4xl tracking-[-0.04em]'>11</p>
-              <p className='mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-muted'>
+              <p className='mt-2 text-[10px] font-bold tracking-[0.12em] text-muted uppercase'>
                 Cities
               </p>
             </div>

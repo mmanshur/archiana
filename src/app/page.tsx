@@ -5,10 +5,11 @@ import { CTA } from '@/components/sections/CTA'
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects'
 import { Hero } from '@/components/sections/Hero'
 import { Services } from '@/components/sections/Services'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export default function Home() {
   return (
-    <div>
+    <div className='min-h-screen w-screen overflow-x-clip antialiased'>
       <Navbar />
       <main>
         <Hero />
@@ -18,6 +19,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }
