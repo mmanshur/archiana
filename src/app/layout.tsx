@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Archiana — Architecture & Creative Studio',
     description:
-      'Architecture, interiors, and creative direction for ambitious brands. Based in Jakarta, Indonesia.',
+      'Archiana Studio is a Bandung-based architecture and design studio, delivering projects across West Java and diverse regions throughout Indonesia.',
     images: ['/images/archiana-hero.jpg'],
   },
 

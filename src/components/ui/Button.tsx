@@ -17,7 +17,7 @@ export function Button({ href, children, dark = true }: ButtonProps) {
           : 'border-paper text-paper hover:bg-paper hover:text-ink',
       )}
     >
-      <span className='transition text-paper group-hover:text-ink'>{children}</span>
+      <span className='text-paper transition group-hover:text-ink'>{children}</span>
 
       <span
         aria-hidden
