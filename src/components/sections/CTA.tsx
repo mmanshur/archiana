@@ -13,7 +13,7 @@ export function CTA() {
             Tell us what you are building, where you are starting, and what you want it to become.
           </p>
           <Button href='mailto:hello@archiana.studio' dark={false}>
-            hello@archiana.studio
+            hello@archiana.web.id
           </Button>
         </div>
       </div>
