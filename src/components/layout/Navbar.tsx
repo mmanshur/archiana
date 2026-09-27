@@ -35,14 +35,14 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className='text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-50'
+              className='text-[11px] font-bold tracking-[0.14em] uppercase transition-opacity hover:opacity-50'
             >
               {link.label}
             </a>
           ))}
           <a
             href='#contact'
-            className='border border-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-60'
+            className='border border-white px-4 py-2 text-[11px] font-bold tracking-[0.14em] uppercase transition-opacity hover:opacity-60'
           >
             Start a project
           </a>
@@ -74,7 +74,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className='block py-4 text-sm font-bold uppercase tracking-[0.12em] transition-opacity hover:opacity-60'
+                className='block py-4 text-sm font-bold tracking-[0.12em] uppercase transition-opacity hover:opacity-60'
               >
                 {link.label}
               </a>
@@ -84,7 +84,7 @@ export function Navbar() {
         <a
           href='#contact'
           onClick={() => setOpen(false)}
-          className='mt-5 flex items-center justify-center border border-white/40 py-3 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-60'
+          className='mt-5 flex items-center justify-center border border-white/40 py-3 text-[11px] font-bold tracking-[0.14em] uppercase transition-opacity hover:opacity-60'
         >
           Start a project
         </a>

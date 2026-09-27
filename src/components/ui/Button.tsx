@@ -17,15 +17,11 @@ export function Button({ href, children, dark = true }: ButtonProps) {
           : 'border-paper text-paper hover:bg-paper hover:text-ink',
       )}
     >
-      <span className={cn('transition group-hover:text-ink', dark && 'text-paper')}>
-        {children}
-      </span>
+      <span className='transition text-paper group-hover:text-ink'>{children}</span>
+
       <span
         aria-hidden
-        className={cn(
-          'text-lg leading-none transition-transform group-hover:translate-x-1 group-hover:text-ink',
-          dark && 'text-paper',
-        )}
+        className='text-lg leading-none text-paper transition-transform group-hover:translate-x-1 group-hover:text-ink'
       >
         ↗
       </span>

@@ -64,13 +64,6 @@ a {
   font-weight: 500;
 }
 
-.hero-img-fade {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><defs><filter id='f' x='-30%' y='-30%' width='160%' height='160%'><feGaussianBlur stdDeviation='2.5'/></filter></defs><path d='M7,0 C7,40 12,70 30,100 L100,100 L100,0 Z' fill='white' filter='url(%23f)'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><defs><filter id='f' x='-30%' y='-30%' width='160%' height='160%'><feGaussianBlur stdDeviation='2.5'/></filter></defs><path d='M7,0 C7,40 12,70 30,100 L100,100 L100,0 Z' fill='white' filter='url(%23f)'/></svg>");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-}
-
 @media (max-width: 767px) {
   :root {
     --page-padding: 24px;

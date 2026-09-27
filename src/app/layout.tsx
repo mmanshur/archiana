@@ -74,9 +74,7 @@ export const metadata: Metadata = {
       { url: '/favicon/favicon.ico', sizes: 'any' },
     ],
     apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-    other: [
-      { rel: 'mask-icon', url: '/favicon/favicon.ico' },
-    ],
+    other: [{ rel: 'mask-icon', url: '/favicon/favicon.ico' }],
   },
 
   // Web manifest

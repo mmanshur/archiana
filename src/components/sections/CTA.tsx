@@ -12,7 +12,8 @@ export function CTA() {
           <p className='mb-7 max-w-sm text-sm leading-6 text-paper/65'>
             Tell us what you are building, where you are starting, and what you want it to become.
           </p>
-          <Button href='mailto:hello@archiana.studio' dark={false}>
+
+          <Button href='mailto:hello@archiana.web.id' dark={false}>
             hello@archiana.web.id
           </Button>
         </div>
